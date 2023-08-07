@@ -16,19 +16,19 @@ import com.ahmetakkoyun.utility.ConnectionProvider;
 public class Main {
     public static void main(String[] args) {
 
-        Takim takim = Takim.builder().ad("Beşiktaş").build();
+        Takim takim = Takim.builder().ad("Fenerbahçe").build();
         ConnectionProvider connectionProvider = new ConnectionProvider();
         TakimRepository takimRepository = new TakimRepository(connectionProvider);
 //        FutbolcuRepository futbolcuRepository = new FutbolcuRepository(connectionProvider);
         FutbolcuController futbolcuController = new FutbolcuController(connectionProvider);
 
 
-//        takimRepository.save(takim);
+       takimRepository.save(takim);
 //        System.out.println(takim);
         Futbolcu futbolcu = Futbolcu.builder().id(7L).
-                ad("Mustafa").mevki("Defans").formaNo(4).takim_id(7L).deger(1000000000L).build();
-//         futbolcuController.save2(futbolcu);
-//        futbolcuController.update(futbolcu);
+                ad("Ahmet").mevki("Defans").formaNo(4).takim_id(9L).deger(1000000000L).build();
+         futbolcuController.save2(futbolcu);
+//         futbolcuController.update(futbolcu);
 
 //        futbolcuController.deleteById(6L);
 
